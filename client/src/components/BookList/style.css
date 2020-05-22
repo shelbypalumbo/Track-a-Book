@@ -1,0 +1,9 @@
+.removeButton {
+  color: red;
+  border: none;
+  background-color: none;
+}
+
+.bookList {
+  padding: 10px;
+}
