@@ -42,26 +42,27 @@ class AddBookModal extends Component {
     //Close modal
     this.toggle();
   };
+
   render() {
     return (
       <div>
-        <Button className="addBookButton" onClick={this.toggle}>
-          Add Book
+        <Button className="addBookButton" color="success" onClick={this.toggle}>
+          Add a Book
         </Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
           <ModalHeader toggle={this.toggle}>Add To Saved Books</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for="book">Book</Label>
+                <Label for="book"></Label>
                 <Input
                   type="text"
                   name="title"
                   id="book"
-                  placeholder="Add book"
+                  placeholder="Book title"
                   onChange={this.onChange}
                 />
-                <Button className="addBookModalButton" color="dark">
+                <Button className="addBookModalButton" color="success">
                   Save Book
                 </Button>
               </FormGroup>

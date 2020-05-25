@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import Store from "./Store";
 import AddBookModal from "./components/AddBookModal";
 import { Container } from "reactstrap";
+import API from "./utils/API";
+import SearchBar from "./components/SearchBar";
 
 class App extends Component {
   render() {
@@ -15,6 +17,7 @@ class App extends Component {
         <div className="App">
           <NavBar />
           <Container>
+            <SearchBar />
             <AddBookModal />
             <BookList />
           </Container>

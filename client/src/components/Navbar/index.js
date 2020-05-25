@@ -10,6 +10,8 @@ import {
   Container
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css";
+import logo from "./Track-A-Book.png";
 
 class NavBar extends Component {
   state = {
@@ -20,19 +22,22 @@ class NavBar extends Component {
       isOpen: !this.state.isOpen
     });
   };
+
   render() {
     return (
       <div>
-        <Navbar color="warning" dark expand="sm">
+        <Navbar color="warning" className="navbar" dark expand="sm">
           <Container>
             <NavbarBrand href="/">
-              <i className="fas fa-book-reader"></i>&nbsp;Google Books Search
+              <img src={logo} className="logo" /> Track-a-Book
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml auto" navbar>
                 <NavItem>
-                  <NavLink href="/">Books</NavLink>
+                  <NavLink className="navItem" href="/">
+                    Books
+                  </NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

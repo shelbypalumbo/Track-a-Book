@@ -23,6 +23,8 @@ class BookList extends Component {
     console.log("BOOKS FROM BOOK LIST", books);
     return (
       <Container>
+        <h3>Book List</h3>
+
         <ListGroup>
           {books.map(({ _id, title }) => (
             <div key={_id} className="bookList">
