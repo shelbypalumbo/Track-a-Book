@@ -2,7 +2,7 @@ const express = require("express"); //Backend framework
 const mongoose = require("mongoose"); //Mongoose to interact with mongoDB
 const bodyParser = require("body-parser"); //bodyparser will allow the server to accept requests and get data from the body, ex post requests
 const path = require("path");
-
+const app = express();
 //api/books
 const books = require("./routes/api/books");
 //api/user
@@ -10,9 +10,7 @@ const books = require("./routes/api/books");
 
 //Set up the port that will be used
 //process.env.PORT for heroku deploy
-const Port = process.env.PORT || 3001;
-
-const app = express();
+const PORT = process.env.PORT || 3001;
 
 //Bodyparser middleware
 app.use(bodyParser.json());
@@ -40,4 +38,4 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //The application will listen on this port
-app.listen(Port, () => console.log(`Server started on ${Port}!`));
+app.listen(PORT, () => console.log(`Server started on ${PORT}!`));
