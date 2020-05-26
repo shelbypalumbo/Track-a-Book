@@ -2,7 +2,8 @@ import {
   GET_BOOKS,
   ADD_BOOK,
   DELETE_BOOK,
-  BOOKS_LOADING
+  BOOKS_LOADING,
+  GOOGLE_BOOK_SEARCH
 } from "../Actions/types";
 
 const initialState = {
@@ -19,6 +20,11 @@ export default function(state = initialState, action) {
         ...state,
         books: action.payload,
         loading: false
+      };
+    case GOOGLE_BOOK_SEARCH:
+      return {
+        ...state,
+        books: state.books.filter(book => book._title !== action.payload)
       };
     case DELETE_BOOK:
       return {

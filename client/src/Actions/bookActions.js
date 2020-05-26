@@ -1,4 +1,10 @@
-import { GET_BOOKS, ADD_BOOK, DELETE_BOOK, BOOKS_LOADING } from "./types";
+import {
+  GET_BOOKS,
+  ADD_BOOK,
+  DELETE_BOOK,
+  BOOKS_LOADING,
+  GOOGLE_BOOK_SEARCH
+} from "./types";
 import axios from "axios";
 
 export const getBooks = () => dispatch => {
@@ -27,15 +33,22 @@ export const deleteBook = id => dispatch => {
       payload: id
     })
   );
-  // return {
-  //   type: DELETE_BOOK,
-  //   //payload sends the id that is passed in along with the dispatch
-  //   payload: id
-  // };
 };
 
 export const setBooksLoading = () => {
   return {
     type: BOOKS_LOADING
   };
+};
+
+//google books
+export const getGoogleBook = title => dispatch => {
+  return axios
+    .get(`https://www.googleapis.com/books/v1/volumes?q=" + ${title}`)
+    .then(res =>
+      dispatch({
+        type: GOOGLE_BOOK_SEARCH,
+        payload: title
+      })
+    );
 };

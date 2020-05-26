@@ -1,32 +1,34 @@
 const express = require("express"); //Backend framework
 const mongoose = require("mongoose"); //Mongoose to interact with mongoDB
-const bodyParser = require("body-parser"); //bodyparser will allow the server to accept requests and get data from the body, ex post requests
 const path = require("path");
 const app = express();
+
 //api/books
 const books = require("./routes/api/books");
 //api/user
-// const user = require("./routes/api/user");
+const user = require("./routes/api/user");
+//api/auth
+const auth = require("./routes/api/auth");
 
-//Set up the port that will be used
-//process.env.PORT for heroku deploy
+//Set up the port that will be used. Process.env.PORT for heroku deploy
 const PORT = process.env.PORT || 3001;
+app.use(express.json());
+//Use routes
 
-//Bodyparser middleware
-app.use(bodyParser.json());
+app.use("/api/books", books);
+app.use("/api/user", user);
+app.use("/api/auth", auth);
 
 //DB configuration
-// const db = require("./config/keys").mongoURI;
-
+const db = process.env.MONGODB_URI || "mongodb://localhost/GoogleBooks";
 //Connect to mongoDB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/GoogleBooks")
+  .connect(db, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+  })
   .then(() => console.log("Database Connected!"))
   .catch(error => console.log(error));
-
-//Use routes
-app.use("/api/books", books);
-// app.use("/api/user", user);
 
 //Serve static assets if in productions
 if (process.env.NODE_ENV === "production") {

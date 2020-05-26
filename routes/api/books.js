@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const auth = require("../../middelware/auth");
 
 //Books Model
 const Book = require("../../models/Books");
@@ -13,7 +14,7 @@ router.get("/", (req, res) => {
 });
 
 //@route Post api/books, create a book
-router.post("/", (req, res) => {
+router.post("/", auth, (req, res) => {
   const newBook = new Book({
     title: req.body.title,
     authors: req.body.authors,
@@ -26,7 +27,7 @@ router.post("/", (req, res) => {
 });
 
 //@route Delete api/books/:id
-router.delete("/:id", (req, res) => {
+router.delete("/:id", auth, (req, res) => {
   Book.findById(req.params.id)
     .then(book => book.remove().then(() => res.json({ success: true })))
     .catch(err => res.status(404).json({ success: false }));
