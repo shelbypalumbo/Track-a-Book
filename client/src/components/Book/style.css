@@ -1,0 +1,32 @@
+.btn-container {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .btn-container {
+    margin-bottom: 15px;
+  }
+}
+
+.imgThumbnail {
+  height: 300px;
+  margin-left: 30px;
+}
+
+.authors {
+  font-style: italic;
+  color: rgb(53, 34, 0);
+}
+
+.bookTitle {
+  color: rgb(226, 147, 1);
+}
+
+.subTitle {
+  font-style: italic;
+  color: rgb(250, 181, 53);
+}
+
+.description {
+  float: left;
+}

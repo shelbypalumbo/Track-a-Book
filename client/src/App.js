@@ -1,29 +1,25 @@
-import React, { Component } from "react";
-import "./App.css";
-import NavBar from "./components/Navbar";
-import BookList from "./components/BookList";
-//Provider shares state through the components
-import { Provider } from "react-redux";
-import Store from "./Store";
-import AddBookModal from "./components/AddBookModal";
-import { Container } from "reactstrap";
-import SearchBar from "./components/SearchBar";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import Saved from "./pages/Saved";
+import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
-class App extends Component {
-  render() {
-    return (
-      <Provider store={Store}>
-        <div className="App">
-          <NavBar />
-          <Container>
-            <SearchBar />
-            <AddBookModal />
-            <BookList />
-          </Container>
-        </div>
-      </Provider>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/saved" component={Saved} />
+          <Route component={NoMatch} />
+        </Switch>
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 
 export default App;

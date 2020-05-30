@@ -1,36 +1,17 @@
-const express = require("express");
-const router = express.Router();
-const auth = require("../../middelware/auth");
+const router = require("express").Router();
+const bookController = require("../../controllers/bookController");
 
-//Books Model
-const Book = require("../../models/Books");
+// /api/books
+router
+  .route("/")
+  .get(bookController.findAll) //Find all books that are saved in the database
+  .post(bookController.create); //Add a book to the books collection in the database
 
-//@route Get api/books
-// Gets all books, sorts books by date in descending order
-router.get("/", (req, res) => {
-  Book.find()
-    .sort({ date: -1 })
-    .then(books => res.json(books));
-});
-
-//@route Post api/books, create a book
-router.post("/", auth, (req, res) => {
-  const newBook = new Book({
-    title: req.body.title,
-    authors: req.body.authors,
-    description: req.body.description,
-    image: req.body.image,
-    link: req.body.link
-  });
-  //Save the new book to the db and return the book back that it is saving in json format
-  newBook.save().then(book => res.json(book));
-});
-
-//@route Delete api/books/:id
-router.delete("/:id", auth, (req, res) => {
-  Book.findById(req.params.id)
-    .then(book => book.remove().then(() => res.json({ success: true })))
-    .catch(err => res.status(404).json({ success: false }));
-});
+// /api/books/:id
+router
+  .route("/:id")
+  .get(bookController.findById) //Find a book in the database by id
+  .put(bookController.update) //Update a book in the database
+  .delete(bookController.remove); //Remove a book from the database
 
 module.exports = router;

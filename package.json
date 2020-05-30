@@ -1,7 +1,16 @@
 {
-  "name": "google-book-search",
-  "version": "0.1.0",
-  "private": true,
+  "name": "Google-Book-Search",
+  "version": "1.0.0",
+  "description": "A React Google book search application.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shelbypalumbo/Google-Book-Search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shelbypalumbo/Google-Book-Search/issues"
+  },
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
@@ -12,25 +21,14 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "concurrently": "^5.2.0",
-    "config": "^3.3.1",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.14"
-  },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
-  "description": "A React Google book search application.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shelbypalumbo/Google-Book-Search.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shelbypalumbo/Google-Book-Search/issues"
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.16"
   }
 }
