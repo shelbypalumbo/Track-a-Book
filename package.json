@@ -1,15 +1,15 @@
 {
-  "name": "Google-Book-Search",
+  "name": "Track-a-Book",
   "version": "1.0.0",
   "description": "A React Google book search application.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shelbypalumbo/Google-Book-Search.git"
+    "url": "git+https://github.com/shelbypalumbo/Track-a-Book.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shelbypalumbo/Google-Book-Search/issues"
+    "url": "https://github.com/shelbypalumbo/Track-a-Book/issues"
   },
   "main": "server.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
-    "concurrently": "^4.1.0",
+    "concurrently": "^5.2.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
