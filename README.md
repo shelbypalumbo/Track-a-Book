@@ -1,6 +1,7 @@
 # Track-a-Book
 
 Track-a-Book is a React Google book search application.
+
 https://track-a-book.herokuapp.com/
 
 **Work in progress as of 5/29/20: User authentication and incorporating Redux.**
@@ -11,8 +12,8 @@ As an avid reader I want to be able to search and save books that I am intereste
 
 ## Usage
 
-The Track-a-Book application implments a search form that queries the google books api with the search value and retrieves relevant books title, author, image, novel summary, and a link to purchase.
-Users can add any book to their saved books which are stored in the books collection of a mongo database. If users no longer wish to have the books saved to their page, they can delete the book with the click of a button.
+The Track-a-Book application implements a search form that queries the google books API with the search input value and retrieves relevant books title, author, image, novel summary, and a link to purchase.
+Users can add any book to their saved books which are stored in the 'Books' collection of a mongoDB database. If the user no longer wishes to have a book saved to their page, they can delete the it with the click of a button.
 
 #### Technologies Used:
 
