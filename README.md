@@ -2,7 +2,7 @@
 
 Track-a-Book is a React Google book search application.
 
-https://track-a-book.herokuapp.com/
+Deployed Application: https://track-a-book.herokuapp.com/
 
 **Work in progress as of 5/29/20: User authentication and incorporating Redux.**
 
