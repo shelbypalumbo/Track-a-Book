@@ -1,6 +1,7 @@
 .navbar {
-  height: auto;
+  height: 120px;
 }
+
 .navItem {
   padding: 20px;
 }

@@ -61,13 +61,13 @@ class Home extends Component {
       <Container>
         <Row>
           <Col size="12">
-            <Card title="Book Search" icon="fas fa-quran">
+            <div className="searchBar">
               <Form
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
                 q={this.state.q}
               />
-            </Card>
+            </div>
           </Col>
         </Row>
         <Row>

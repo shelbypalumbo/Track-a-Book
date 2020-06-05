@@ -1,3 +1,7 @@
 .container {
   font-family: "Nunito Sans", sans-serif;
 }
+.searchBar {
+  margin-top: 50px;
+  width: 100%;
+}
