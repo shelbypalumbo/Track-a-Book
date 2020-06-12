@@ -6,11 +6,9 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <InputGroup>
       <InputGroupAddon className="sear" addonType="prepend">
-        {" "}
-        <h3>
-          {" "}
-          <i className="fas fa-quran"></i> Search: &nbsp;
-        </h3>
+        <h5>
+          <i className="fas fa-quran"></i> &nbsp;Search: &nbsp;
+        </h5>
       </InputGroupAddon>
       <Input
         className="form-control"

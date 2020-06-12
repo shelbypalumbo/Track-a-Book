@@ -5,8 +5,8 @@ import "./style.css";
 function Footer() {
   return (
     <footer>
-      <hr />
       <p className="footer">
+        <hr />
         <img src={logo} alt="logo" className="logo" /> Track-a-Book, a React.js
         application.
       </p>

@@ -11,8 +11,8 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
         <Wrapper>
+          <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/Saved" component={Saved} />

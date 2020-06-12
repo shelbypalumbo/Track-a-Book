@@ -1,11 +1,8 @@
 .footer {
   font-size: 10pt;
   text-align: center;
-  height: 100px;
-  padding: 10px;
-  margin: 0px;
-}
-
-hr {
-  margin: 0;
+  height: auto;
+  margin-top: 150px;
+  padding: 5px;
+  background-color: rgb(243, 184, 243);
 }

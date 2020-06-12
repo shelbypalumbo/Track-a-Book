@@ -6,9 +6,12 @@
 
 .searchBar {
   margin-top: 50px;
-  width: 70%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+.form-control {
+  width: 70%;
 }
 .searchBtn {
   border: none;
