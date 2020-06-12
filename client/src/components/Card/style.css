@@ -1,0 +1,16 @@
+.card-header {
+  border: none;
+  color: rgb(251, 250, 252);
+  background: rgb(247, 119, 230);
+  background: linear-gradient(
+    90deg,
+    rgb(247, 119, 230) 33%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+.card {
+  text-align: center;
+  margin: auto;
+  border: none;
+  width: 85%;
+}

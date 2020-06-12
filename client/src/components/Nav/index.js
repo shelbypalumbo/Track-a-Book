@@ -26,7 +26,7 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <Navbar color="warning" className="navbar" dark expand="sm">
+        <Navbar className="navbar" dark expand="sm">
           <Container>
             <NavbarBrand href="/">
               <h1>

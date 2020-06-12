@@ -58,7 +58,7 @@ class Home extends Component {
 
   render() {
     return (
-      <Container>
+      <Container className="cont">
         <Row>
           <Col size="12">
             <div className="searchBar">
@@ -72,7 +72,11 @@ class Home extends Component {
         </Row>
         <Row>
           <Col size="12">
-            <Card title="Tracked Books" icon="far fa-compass">
+            <Card
+              className="card-header"
+              title="Tracked Books"
+              icon="far fa-compass"
+            >
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (

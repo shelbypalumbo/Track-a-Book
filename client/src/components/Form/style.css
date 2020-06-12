@@ -1,0 +1,22 @@
+.sear {
+  background: -webkit-linear-gradient(rgb(250, 63, 250), rgb(240, 148, 220));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.searchBar {
+  margin-top: 50px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.searchBtn {
+  border: none;
+  color: rgb(238, 67, 215);
+  font-size: 20pt;
+  background: transparent;
+}
+
+.searchBtn:hover {
+  color: rgb(245, 154, 69);
+}

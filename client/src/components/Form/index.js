@@ -1,10 +1,11 @@
 import React from "react";
-import { InputGroup, InputGroupAddon, Input, Button } from "reactstrap";
+import { InputGroup, InputGroupAddon, Input } from "reactstrap";
+import "./style.css";
 
 function Form({ q, handleInputChange, handleFormSubmit }) {
   return (
     <InputGroup>
-      <InputGroupAddon addonType="prepend">
+      <InputGroupAddon className="sear" addonType="prepend">
         {" "}
         <h3>
           {" "}
@@ -22,9 +23,14 @@ function Form({ q, handleInputChange, handleFormSubmit }) {
         required
       />
       <InputGroupAddon addonType="append">
-        <Button onClick={handleFormSubmit} color="info" type="submit">
+        <button
+          onClick={handleFormSubmit}
+          className="searchBtn"
+          // color="primary"
+          // type="submit"
+        >
           <i className="fas fa-search"></i>
-        </Button>
+        </button>
       </InputGroupAddon>
     </InputGroup>
   );
