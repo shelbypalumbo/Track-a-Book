@@ -10,17 +10,15 @@ import Wrapper from "./components/Wrapper";
 function App() {
   return (
     <Router>
-      <div>
-        <Wrapper>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/Saved" component={Saved} />
-            <Route component={NoMatch} />
-          </Switch>
-          <Footer />
-        </Wrapper>
-      </div>
+      <Wrapper>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Saved" component={Saved} />
+          <Route component={NoMatch} />
+        </Switch>
+        <Footer />
+      </Wrapper>
     </Router>
   );
 }

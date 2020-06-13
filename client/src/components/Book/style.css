@@ -1,5 +1,7 @@
 .btn-container {
-  float: right;
+  color: white;
+
+  padding-bottom: 10px;
 }
 
 @media (max-width: 767px) {
@@ -10,16 +12,22 @@
 
 .imgThumbnail {
   height: 300px;
-  margin-left: 30px;
 }
-
+.imgThumbnailCol {
+  flex: 4;
+}
 .authors {
   font-style: italic;
+  flex: 1;
   color: rgb(53, 34, 0);
 }
 
 .bookTitle {
   color: rgb(226, 147, 1);
+}
+
+.title {
+  flex: 1;
 }
 
 .subTitle {
@@ -28,5 +36,10 @@
 }
 
 .description {
-  float: left;
+  flex: 7;
+}
+
+.book-list-item {
+  display: flex;
+  margin-bottom: 10px;
 }

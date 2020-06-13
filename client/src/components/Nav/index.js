@@ -29,10 +29,10 @@ class NavBar extends Component {
         <Navbar className="navbar" dark expand="sm">
           <Container>
             <NavbarBrand href="/">
-              <h1>
+              <h2>
                 <img src={logo} alt="logo" className="logo" />
                 Track-a-Book
-              </h1>
+              </h2>
             </NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
