@@ -26,9 +26,6 @@ Users can add any book to their saved books which are stored in the 'Books' coll
 - Reactstrap
 - Express
 - Node.js
-- HTML
-- CSS
-- Javascript
 - Google Books API | https://developers.google.com/books/docs/v1/getting_started
 
 #### Additional Styling Framework
