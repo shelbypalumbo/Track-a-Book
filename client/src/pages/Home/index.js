@@ -11,7 +11,7 @@ class Home extends Component {
   state = {
     books: [],
     q: "",
-    message: "Use the search to track a book!"
+    message: "Use the search bar to track a book!"
   };
 
   handleInputChange = event => {

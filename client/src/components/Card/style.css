@@ -1,15 +1,17 @@
 .card-header {
   border: none;
   color: rgb(251, 250, 252);
-  background: rgb(247, 119, 230);
+  background: rgb(81, 102, 194);
   background: linear-gradient(
     90deg,
-    rgb(247, 119, 230) 33%,
-    rgba(252, 176, 69, 1) 100%
+    rgb(81, 102, 194) 33%,
+    rgb(213, 217, 241) 100%
   );
 }
 .card {
   margin: auto;
   border: none;
   width: 90%;
+  height: 420px;
+  overflow: scroll;
 }

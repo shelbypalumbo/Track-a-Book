@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./Track-a-Book.png";
+import logo from "../Nav/Track-a-Book.png";
 import "./style.css";
 
 function Footer() {
