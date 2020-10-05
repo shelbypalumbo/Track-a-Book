@@ -8,10 +8,33 @@
     rgb(213, 217, 241) 100%
   );
 }
+
+.imgThumbnail {
+  padding: 0 10px;
+}
+
 .card {
   margin: auto;
   border: none;
   width: 90%;
-  height: 420px;
+}
+
+@media screen and (max-width: 700px) {
+  .description {
+    flex: 1 1;
+  }
+
+  .imgThumbnail {
+    height: 200px;
+    width: auto;
+  }
+
+  .card {
+    height: 650px;
+  }
+}
+
+.card-body {
+  height: 375px;
   overflow: scroll;
 }
