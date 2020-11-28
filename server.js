@@ -3,6 +3,17 @@ const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
+const password = require("./password");
+
+const MongoClient = require("mongodb").MongoClient;
+const uri = `mongodb+srv://heroku_4f749hc7:${password}@cluster0.purga.mongodb.net/Books?retryWrites=true&w=majority`;
+const client = new MongoClient(uri, { useNewUrlParser: true });
+
+// client.connect(err => {
+//   const collection = client.db("test").collection("devices");
+//   // perform actions on the collection object
+//   client.close();
+// });
 
 // Configure body parsing for AJAX requests
 app.use(express.urlencoded({ extended: true }));
